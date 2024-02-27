@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    min-height: 100vh;
+    background-color: #222;
+    overflow: hidden;
+}
+.container .main-img img {
+    background:no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 40vh;
+    width: 100%;
+}
+.container .main-img #bg-dark {
+    position: absolute;
+    transition: 0.3s;
+}
+.container .main-img #bg-light {
+    opacity: 0;
+    transition: 0.3s;
+}
+.title {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: -180px;
+    color: #FFF;
+}
+.title h1 {
+    font-size: 48px;
+    font-weight: 550;
+    letter-spacing: 4px;
+    user-select: none;
+    position: relative;
+}
+.title i {
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    top: 12px;
+}
+.title #moon {
+    display: none;
+    color: #111;
+}
+.edit-input {
+    position: absolute;
+    left: 30%;
+    transform: translateY(-150px);
+}
+.edit-input input {
+    width: 550px;
+    padding: 15px 10px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #2d2d2d;
+    font-size: 17px;
+    color: #fff;
+    letter-spacing: 0.6px;
+    transition: 0.3s;
+}
+.edit-input input:focus {
+    border: 1px solid rgb(11, 125, 255);
+    transform: scale(1.02);
+}
+
+/* Start Media Query */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .title {
+        justify-content: space-around;
+    }
+    .container .main-img img {
+        height: 35vh;
+    }
+    .edit-input {
+        display: flex;
+        justify-content: center;
+    }
+    .edit-input input {
+        width: 560px;
+        position: absolute;
+        left: -70px;
+    }
+    
+} 
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .title {
+        justify-content: space-around;
+    }
+    .container .main-img img {
+        height: 30vh;
+    }
+    .edit-input {
+        display: flex;
+        justify-content: center;
+    }
+    .edit-input input {
+        width: 450px;
+        position: absolute;
+        left: -70px;
+    }
+    
+} 
+@media screen and (max-width: 425px) {
+    .title {
+        justify-content: space-around;
+    }
+    .container .main-img img {
+        height: 30vh;
+    }
+    .edit-input {
+        display: flex;
+        justify-content: center;
+    }
+    .edit-input input {
+        width: 280px;
+        position: absolute;
+        left: -60px;
+    }
+}
+/* End Media Query */
